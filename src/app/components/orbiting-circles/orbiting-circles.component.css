@@ -1,0 +1,65 @@
+.orbit-root {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbit-center-logo {
+  position: absolute;
+  z-index: 5;
+}
+.orbit-center-logo img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.orbit {
+  position: absolute;
+  animation: spin 12s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed orange;
+  border-radius: 50%;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3); /* inner shadow */
+}
+
+.orbit.reverse {
+  animation-direction: reverse;
+}
+
+.orbit-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+}
+
+.orbit img {
+  display: block;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Optional: Different border colors per orbit */
+.orbit-outer {
+  border-color: orange;
+}
+.orbit-middle {
+  border-color: teal;
+}
+.orbit-inner {
+  border-color: purple;
+}

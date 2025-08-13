@@ -1,0 +1,280 @@
+/* Card container */
+.service-card{
+  position: relative;
+  z-index: 0;
+  background: #fff;
+  border: 2px dashed transparent;
+  border-radius: 20px;
+  padding: 22px;
+  transition: transform .25s ease, box-shadow .25s ease;
+  overflow: visible;            /* allow pseudo element to show outside */
+  display: flex;
+  align-items: center;
+}
+
+/* content: icon + text side-by-side */
+.card-content{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+}
+
+/* icon */
+.service-icon{
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex: 0 0 64px;
+  border-radius: 50%;
+  padding: 8px;
+  background: rgba(255,122,24,0.06); /* subtle circle bg */
+}
+
+/* text */
+.service-text { text-align: left; }
+.service-text h5 { font-size: 1.05rem; margin:0; }
+.service-text p { margin:0; color:#6c6c6c; }
+
+/* hover lift & subtle shadow */
+.service-card:hover{
+  transform: translateY(-8px);
+  border-color: orange; 
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
+/* Gradient dashed rounded border on hover using SVG data-URI background in pseudo-element */
+.service-card::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -10px; /* space for border */
+  border-radius: 26px; /* service-card radius + inset */ 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  transform: scale(.98);
+  transition: opacity .22s ease, transform .22s ease;
+}
+
+/* show on hover */
+.service-card:hover::before{
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* small screens: stack icon above text */
+@media (max-width: 576px){
+  .card-content{
+    flex-direction: column;
+    text-align: center;
+  }
+  .service-text { text-align: center; }
+  .service-icon{ margin-bottom: 8px; }
+}
+
+.services-section {
+  margin-bottom: 60px; /* adjust as needed */
+}
+/* map csss */
+.world-map-container {
+  position: relative;
+  height: 400px; /* responsive height can be handled with media queries */
+  margin-bottom: 60px;
+}
+
+.object-fit{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    color: transparent;
+}
+@media (max-width: 576px) {
+  .world-map-container { height: 250px; }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .world-map-container { height: 300px; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .world-map-container { height: 400px; }
+}
+@media (min-width: 1025px) {
+  .world-map-container { height: 600px; }
+}
+
+
+/* partner ship css */
+
+.partnership-section {
+  border: 2px dotted orange;
+  border-radius: 15px;
+  background: #fffaf8;
+}
+
+.partnership-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.partnership-item {
+  padding: 1rem;
+}
+
+.partnership-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.partnership-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.partnership-image img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+.partnership-text {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .partnership-content,
+  .partnership-content.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  .partnership-image img {
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* collaborate css */
+ 
+.collaborate-card {
+  border: 2px dashed #e5e5e5;
+  border-radius: 12px;
+  background: white;
+  padding: 15px;
+  height: 100px; /* fixed neat height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.collaborate-card img {
+  max-height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.collaborate-card:hover {
+  transform: translateY(-3px);
+  border-color: orange;
+}
+
+
+/* faq */
+
+/* Existing CSS remains unchanged */
+
+/* FAQ Section */
+ /* FAQ Section */
+.faq-section {
+    margin-bottom: 60px;
+    padding-left: 15px; /* Left spacing */
+    padding-right: 15px; /* Right spacing */
+}
+
+.faq-card {
+    background: #ffffff;
+    border: 2px dashed #e5e5e5;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: border-color 0.2s ease;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px;
+    color: #333;
+}
+
+.faq-header:hover {
+    color: #d94f2a;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.faq-content {
+    padding: 15px 10px 10px;
+    color: #6c6c6c;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: none;
+}
+
+.faq-content p {
+    margin: 0;
+}
+
+.faq-card.active .faq-content {
+    display: block;
+}
+
+/* Hover effect for FAQ card */
+.faq-card:hover {
+    border-color: #d94f2a;
+}
+
+/* Responsive Design for FAQ */
+@media (max-width: 576px) {
+    .faq-header {
+        font-size: 1rem;
+    }
+    .faq-content {
+        font-size: 0.9rem;
+    }
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .faq-header {
+        font-size: 1.05rem;
+    }
+    .faq-content {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .col-md-6 {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}
+
+/* Ensure proper spacing and alignment */
+.row.justify-content-center {
+    margin-left: -15px;
+    margin-right: -15px;
+}

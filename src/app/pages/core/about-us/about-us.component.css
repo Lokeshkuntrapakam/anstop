@@ -1,0 +1,225 @@
+.hero-section {
+  position: relative;
+  padding: 100px 0 60px; /* extra top padding so content is visible under header */
+  background: url('src/assets/about/banner/Service_bg.webp') no-repeat center center/cover;
+  background-size: cover;
+  color: #000;
+}
+
+ 
+.text-gradient {
+  background: linear-gradient(90deg, #d4145a, #fbb03b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stats .stat h3 {
+  font-size: 2rem;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+
+ 
+/* aws services */
+.about-us-section {
+  background-color: #fff;
+}
+
+.section-underline {
+  border: none;
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(90deg, #d4145a, #fbb03b);
+  margin: 10px 0 20px;
+}
+
+.about-us-section h3 {
+  font-size: 1.5rem;
+}
+
+.about-image {
+  max-width: 70%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .about-us-section {
+    text-align: center;
+  }
+}
+/* aws ends */
+
+/* our mission */
+.about-card-section {
+  background-color: #fff;
+}
+
+.about-card {
+  background: linear-gradient(90deg, rgba(255, 210, 210, 0.2), rgba(255, 210, 210, 0.1));
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.about-card-img {
+  max-width: 70%;
+  height: auto;
+}
+
+.about-card h3 {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    text-align: center;
+  }
+}
+
+
+/* our values */
+ .our-values-section {
+  background-color: #fff;
+}
+
+.section-underline {
+  border: none;
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(90deg, #d4145a, #fbb03b);
+  margin: 10px 0 20px;
+}
+
+.value-card {
+  background-color: #fff;
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.icon-circle.purple { background-color: #a855f7; }
+.icon-circle.orange { background-color: #f97316; }
+.icon-circle.green  { background-color: #10b981; }
+.icon-circle.blue   { background-color: #3b82f6; }
+
+
+/* our teams */
+ /* Team Tabs */
+.team-tab {
+  border: 1px dashed #ddd;
+  padding: 8px 18px;
+  border-radius: 25px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.team-tab.active {
+  border: 1px dashed #ff6600;
+  color: #ff6600;
+}
+
+.team-tab:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+/* Profile Images */
+.profile_img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  background-color: rgb(3, 3, 3); /* Helps white images be visible */
+  padding: 2px;
+}
+
+/* Social Icon */
+.team-social-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+/* Team Card */
+/* .team-card {
+ text-align: center;
+    background-color: #fff;
+    border: 2px dashed #ddd;
+    border-radius: 12px; 
+    box-shadow: 0 2px 6px rgb(0 0 0 / 25%);
+    padding: 20px 15px;
+    height: 320px;
+    width: 86%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); 
+   border: 2px dashed orange;
+   cursor: pointer;
+} */
+ .team-card {
+  position: relative;
+  padding-bottom: 50px; /* space for the icon */
+  background-color: #fff;
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+   padding: 20px 15px;
+    height: 320px;
+    width: 86%;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.team-social-icon {
+    position: relative;
+    bottom: 56px;
+    left: 44%;
+    transform: translateX(-50%);
+}
+
+.team-card h5 {
+  font-size: 1rem;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* our teams end */

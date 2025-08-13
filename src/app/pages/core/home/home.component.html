@@ -1,0 +1,119 @@
+<!-- <div class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="stolzl-medium display-5" style="color:#3D0C11">What We Provide</h2>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+        <div class="col-12 col-sm-6 col-lg-4" *ngFor="let data of services">
+            <div class="service-card h-100">
+                <div class="card-content">
+                    <img [src]="data.img" [alt]="data.name" class="service-icon" />
+                    <div class="service-text">
+                        <h5 class="fw-bold mb-1">{{ data.name }}</h5>
+                        <p class="text-muted small mb-0">{{ data.des }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+
+<div class="flex flex-col w-full bg-white items-center justify-center">
+    <div class="w-full flex items-center justify-center">
+        <h2 class="mt-5 sm:mt-6 md:mt-8 text-2xl md:text-3xl lg:text-4xl stolzl-medium text-center text-[#3D0C11]">Service Delivery Excellence across 20+ Countries</h2>
+    </div>
+    <div class="max-w-screen-xl w-full relative">
+        <div class="w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[600px] xl:h-[900px] overflow-hidden"><img alt="World Map Service Coverage" fetchpriority="high" decoding="async" data-nimg="fill" class="object-fit" src="assets/home/worldmap.svg" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
+    </div>
+</div> -->
+
+<!-- Services Section -->
+<div class="container py-5 services-section">
+    <div class="text-center mb-4">
+        <h2 class="stolzl-medium display-5" style="color:#3D0C11">What We Provide</h2>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+        <div class="col-12 col-sm-6 col-lg-4" *ngFor="let data of services">
+            <div class="service-card h-100">
+                <div class="card-content">
+                    <img [src]="data.img" [alt]="data.name" class="service-icon" />
+                    <div class="service-text">
+                        <h5 class="fw-bold mb-1">{{ data.name }}</h5>
+                        <p class="text-muted small mb-0">{{ data.des }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+
+<!-- World Map Section -->
+<div class="flex flex-col w-full bg-white items-center justify-center world-map-section">
+    <div class="w-full flex items-center justify-center">
+        <h2 class="mt-5 text-2xl md:text-3xl lg:text-4xl stolzl-medium text-center text-[#3D0C11]">
+            Service Delivery Excellence across 20+ Countries
+        </h2>
+    </div>
+    <div class="max-w-screen-xl w-full world-map-container">
+        <img alt="World Map Service Coverage" src="assets/home/worldmap.svg" class="object-fit" />
+    </div>
+</div>
+
+<!-- Partnership Section -->
+<div class="container py-5 partnership-section">
+    <div class="text-center mb-5">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl stolzl-medium text-[#3D0C11]">
+            AWS Partnership Excellence
+        </h2>
+    </div>
+
+    <div class="partnership-wrapper">
+        <div class="partnership-item" *ngFor="let partner of partnership_dat; let i = index">
+            <div class="partnership-content" [ngClass]="{ 'reverse': i % 2 !== 0 }">
+                <div class="partnership-image">
+                    <img [src]="partner.img" [alt]="partner.name" />
+                </div>
+                <div class="partnership-text">
+                    <h4 class="fw-bold">{{ partner.name }}</h4>
+                    <p class="text-muted">{{ partner.des }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Collaborate -->
+<div class="container py-5 services-section">
+    <div class="row g-4 justify-content-center align-items-center text-center">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" *ngFor="let data of collaborate_logos">
+            <div class="collaborate-card">
+                <img [src]="data.img" [alt]="data.alt || 'Partner Logo'" class="img-fluid" loading="lazy" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Frequently Asked Questions Section -->
+<div class="container py-5 faq-section">
+    <div class="text-center mb-4">
+        <h2 class="stolzl-medium display-5" style="color:#3D0C11">Frequently Asked Questions</h2>
+    </div>
+    <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-6" *ngFor="let faq of fer_que; let i = index">
+            <div class="faq-card" [ngClass]="{'active': faq.isOpen}">
+                <div class="faq-header" (click)="toggleFAQ(faq)">
+                    <span>{{ faq.question }}</span>
+                    <span class="faq-toggle">{{ faq.isOpen ? '-' : '+' }}</span>
+                </div>
+                <div class="faq-content" *ngIf="faq.isOpen">
+                    <p>{{ faq.ans }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

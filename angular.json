@@ -24,7 +24,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [ 
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -87,6 +88,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "869cb15b-0dfa-4e1d-8339-4fb87dedcbb9"
   }
 }

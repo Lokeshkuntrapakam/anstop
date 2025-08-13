@@ -1,0 +1,25 @@
+<div class="about-section">
+    <!-- Section Header -->
+    <app-header></app-header>
+
+    <div class="about-content">
+        <!-- Left: Text -->
+        <div class="about-text">
+            <h2>
+                <span>67+ Startups &</span><br />
+                <span>192+ SMBs served</span>
+            </h2>
+            <p>
+                Empowering 70+ startups and 200+ SMBs with tailored cloud solutions,
+                driving innovation and growth every step of the way.
+            </p>
+            <button class="cta-btn">Schedule a Call</button>
+        </div>
+
+        <!-- Right: Orbit Animation -->
+        <div class="orbit-wrapper">
+            <app-orbiting-circles [icons]="ringOuter" [radius]="140" [iconSize]="42" [speed]="14">
+            </app-orbiting-circles>
+        </div>
+    </div>
+</div>

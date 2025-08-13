@@ -1,0 +1,197 @@
+.footer-container {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo-img {
+    height: 80px;
+    margin-right: 15px;
+}
+
+.logo-text .logo-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-text .highlight {
+    color: #d94f2a;
+}
+
+.logo-text .slogan {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.section h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.section ul li a:hover {
+    color: #d94f2a;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #d94f2a;
+}
+
+.locations h4,
+.awards h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.location-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.location {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px 20px;
+    min-width: 200px;
+}
+
+.location img {
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.location h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.location .location-name {
+    color: #d94f2a;
+    font-weight: bold;
+}
+
+.location .location-address {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.mailing-address {
+    margin-bottom: 30px;
+}
+
+.mailing-address h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mailing-address .address,
+.mailing-address .contact {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.mailing-address .contact a {
+    color: #d94f2a;
+    text-decoration: none;
+}
+
+.mailing-address .contact a:hover {
+    text-decoration: underline;
+}
+
+.award-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 101px;
+    margin-bottom: 26px;
+}
+
+.award-row img {
+    height: 80px;
+    object-fit: contain;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #ccc;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-sections {
+        flex-direction: column;
+    }
+
+    .section {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .location-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .award-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .award-row img {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,44 @@
+<!-- <div class="orbit-root" [class.pause-on-hover]="pauseOnHover">
+    <div class="orbit" [class.reverse]="reverse" [style.animationDuration]="speed + 's'" [style.width.px]="radius * 2" [style.height.px]="radius * 2">
+
+        <ng-container *ngFor="let icon of icons; index as i">
+            <div class="orbit-item" [style.transform]="'rotate(' + angleAt(i) + 'deg) translate(' + radius + 'px) rotate(' + (-angleAt(i)) + 'deg)'">
+                <img [src]="icon" [alt]="'icon ' + (i + 1)" [style.width.px]="iconSize" [style.height.px]="iconSize" />
+            </div>
+        </ng-container>
+
+    </div>
+</div> -->
+<div class="orbit-root" [class.pause-on-hover]="pauseOnHover">
+    <!-- Center logo -->
+    <div class="orbit-center-logo">
+        <img src="assets/logos/anstop_bg_remove.png" alt="Center Logo" />
+    </div>
+
+    <!-- Outer Orbit -->
+    <div class="orbit orbit-outer" [style.animationDuration]="'14s'" [style.width.px]="outerRadius * 1" [style.height.px]="outerRadius * 1">
+        <ng-container *ngFor="let icon of outerIcons; index as i">
+            <div class="orbit-item" [style.transform]="'rotate(' + angleAt(i, outerIcons.length) + 'deg) translate(' + outerRadius + 'px) rotate(' + (-angleAt(i, outerIcons.length)) + 'deg)'">
+                <img [src]="icon" [style.width.px]="iconSize" [style.height.px]="iconSize" />
+            </div>
+        </ng-container>
+    </div>
+
+    <!-- Middle Orbit -->
+    <div class="orbit orbit-middle reverse" [style.animationDuration]="'12s'" [style.width.px]="middleRadius * 1" [style.height.px]="middleRadius * 1">
+        <ng-container *ngFor="let icon of middleIcons; index as i">
+            <div class="orbit-item" [style.transform]="'rotate(' + angleAt(i, middleIcons.length) + 'deg) translate(' + middleRadius + 'px) rotate(' + (-angleAt(i, middleIcons.length)) + 'deg)'">
+                <img [src]="icon" [style.width.px]="iconSize" [style.height.px]="iconSize" />
+            </div>
+        </ng-container>
+    </div>
+
+    <!-- Inner Orbit -->
+    <div class="orbit orbit-inner" [style.animationDuration]="'10s'" [style.width.px]="innerRadius * 1" [style.height.px]="innerRadius * 1">
+        <ng-container *ngFor="let icon of innerIcons; index as i">
+            <div class="orbit-item" [style.transform]="'rotate(' + angleAt(i, innerIcons.length) + 'deg) translate(' + innerRadius + 'px) rotate(' + (-angleAt(i, innerIcons.length)) + 'deg)'">
+                <img [src]="icon" [style.width.px]="iconSize" [style.height.px]="iconSize" />
+            </div>
+        </ng-container>
+    </div>
+</div>
